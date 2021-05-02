@@ -1,0 +1,923 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(all.min.css);
+@import url(font.css);
+html {
+	width: 100vw;
+	height: 100vh;
+}
+
+[class $= inner] {
+  width: 1250px;
+	height: 100%;
+  margin: auto;
+}
+html {
+	height: 100vh;
+	position: relative;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+#main .container {
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 30px;
+	box-sizing: border-box;
+}
+
+/*header*/
+.header-inner {
+	position: relative;
+		height: 90px;
+}
+#header h1 {
+	font-family: Gil;
+	font-size: 36px;
+	color: #212121;
+	position: absolute;
+	top: 50%;
+	margin-top: -18px;
+}
+#header .gnb {
+	position: absolute;
+	font-family: Gil-l;
+	color: #919191;
+	font-size: 18px;
+	left: 50%;
+	top: 50%;
+	margin-top: -9px;
+	margin-left: -200px;
+}
+#header .gnb a {
+	display: block;
+	float: left;
+	padding: 0 50px;
+	transition: all 0.3s;
+}
+#header .gnb a:hover {
+	color: #212121;
+}
+#header .sns-box {
+	position: absolute;
+	right: 0;
+	font-size: 20px;
+	top: 50%;
+	margin-top: -10px;
+	color: #626262;
+}
+#header .sns-box a {
+	transition: all 0.3s;
+}
+#header .sns-box a:hover {
+	color: #212121;
+}
+
+/*main*/
+.check-text a .cp {
+	display: inline-block;
+	float: right;
+	margin-left: 5px;
+	position: absolute;
+}
+/*메인 첫화면 텍스트*/
+#main .main-inner {
+	position: relative;
+	height: 85vh;
+	height: 85vh;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#main .main-inner .come {
+	margin-top: 350px;
+	font-size: 4em;
+	font-stretch: normal;
+	font-family: Noto;
+	font-weight: 600;
+	color: #363636;
+	position: absolute;
+	left: 50%;
+	margin-left: -260px;
+}
+
+#main .main-inner .come {
+	animation-name: fade;
+  animation-duration:3s;
+  animation-duration: leaner;
+  animation-direction:alternate;
+  animation-fill-mode: forwards;
+	
+}
+
+
+.main-color {
+	color: #ff1100
+}
+/*페이드아웃*/
+#main .main-inner .come {
+	display: block;
+}
+/*페이드인*/
+#main .main-inner [class $= main-box] {
+	position: absolute;
+	width: 1250px;
+	top: 50%;
+	margin-top: -300px;
+	display: none
+}
+#main .main-inner .img-box {
+	width: 48%;
+	height: 600px;
+	background: url(../img/bg.png) no-repeat center center / cover;
+	float: left;
+	border-radius: 30px;
+	
+		animation-name: fade;
+  animation-duration:3s;
+  animation-duration: leaner;
+  animation-direction:alternate;
+  animation-fill-mode: forwards;
+}
+#main .check-box {
+	width: 48%;
+	height: 600px;
+	background: rgba(238, 238, 238, 0.5);
+	float: right;
+	border-radius: 30px;
+}
+
+/*check box*/
+.check-text {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-bottom: 50px;
+
+}
+.check-text:not(:nth-last-of-type(1)) {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 50px;
+}
+.check-text:first-child {
+	margin-top: 150px;
+}
+.check-text a {
+	display: inline-block;
+	float: left;
+	width: 48%;
+	margin: auto;
+	font-size: 20px;
+}
+.check-text a i {
+	float: left;
+	margin-left: 70px;
+}
+
+.fa-circle {
+	display: inline-block;
+}
+.fa-dot-circle {
+	display: none;
+}
+.fa-circle.on {
+	display: none;
+}
+.fa-dot-circle.on {
+	display: inline-block;
+}
+[class $= go-btn] {
+	display: block;
+	width: 30%;
+	margin: auto;
+	text-align: center;
+	padding: 10px 0;
+	background: #ccc;
+	margin-top: 30px;
+	border-radius: 10px;
+	color: #fff;
+	transition: all 0.3s;
+}
+
+[class $= go-btn]:hover {
+	background: #aaa;
+}
+
+/*케이크 선택 화면*/
+[class $= cake-box] {
+	position: absolute;
+	width: 1250px;
+	height: 80vh;
+	margin-top: 70px;
+	display: none;
+}
+/*back button*/
+[class $= back-btn] {
+	width: 100px;
+	padding: 10px;
+	display: block;
+	text-align: center;
+  margin: 0 auto;
+}
+[class $= back-btn]:hover {
+	text-decoration: underline;
+}
+/*케이크 선택창(스크롤)*/
+.cake-info {
+	width: 99.9%;
+	height: 80%;;
+	overflow: auto;
+}
+
+/*케이크 선택창 내용*/
+.cake {
+	width: 50%;
+	float: left;
+	margin-bottom: 40px;
+	box-sizing: border-box;
+/*	none*/
+	display: none;
+}
+.cake img {
+	display: block;
+	float: left;
+	border-radius: 30px;
+}
+.cake-text {
+	width: 380px;
+	float: left;
+	padding: 40px;
+	padding-left: 30px;
+	margin-left: 20px;
+	box-sizing: border-box;
+	transition: all 0.3s;
+}
+.cake-text:hover {
+	background: rgba(245, 245, 245, 0.56);
+}
+.cake img {
+	width: 200px;
+	height: 200px;
+	background: #eee;
+}
+
+/*케이크 텍스트 데코*/
+.flavor {font-size: 12px; margin-bottom: 10px;}
+.flavor i:not(:first-child) {margin-left: 10px;}
+.cake h3 {font-size: 30px; margin-bottom: 10px;}
+.map {font-size: 12px; margin-bottom: 10px;}
+.name {font-size: 18px; margin-bottom: 5px;}
+.price {margin-bottom: 10px;}
+
+.fa-arrow-up,.fa-arrow-down {
+	margin-left: 0!important;
+}
+
+/*케이크 선택 클래스 조건 설정*/
+
+.sw,.nsw,.sf,.nsf,.cl,.ncl {
+	transition: all 0.3s;
+}
+
+.sw.on1 {display: block;}
+.nsw.on2 {display: block}
+.sf.on3 {display: block}
+.nsf.on4 {display: block}
+.cl.on5 {display: block}
+.ncl.on6 {display: block}
+
+
+/*케이크 상세 설명*/
+[class $= list] {
+	width: 100%;
+	height: 80vh;
+	position: relative;
+	display: none;
+	/* overflow: auto; */
+}
+[class $= list].on {
+	display: block;
+}
+.info-text {
+	position: absolute;	
+	top: 50%;
+	margin-top: -300px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px;
+	padding-top: 0;
+	display: none;
+	overflow: auto;
+	height: 70vh;
+}
+.info-text.on {
+	display: block;
+}
+.info-text > [class $= list-back-btn] {
+	display: block;
+	margin-top: 0px;
+	height: 30px;
+	position: absolute;
+	bottom: 120px;
+	width: 50%;
+	left: 50%;
+	margin-left: -315px;
+}
+.info-text img {
+	width: 470px;
+	/* height: 500px; */
+	background: #000;
+	border-radius: 30px;
+	display: block;
+	float: left;
+}
+.info-text .list-text {
+	float: left;
+	/* width: 720px; */
+	height: 500px;
+	padding: 50px;
+	padding-left: 100px;
+	box-sizing: border-box;
+}
+.info-text .review {
+	width: 100%;
+	height: 300px;
+	/* background-color: red; */
+	float: left;
+}
+.info-text .review .review-text {
+	/* margin-top: 50px; */
+	padding-top: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: #555;
+	line-height: 1.6;
+	/* border-top: 1px solid #777; */
+}
+.info-text .review .review-btn-box {
+	margin-top: 50px;
+}
+.review .review-btn-box button {
+	width: 20%;
+	font-size: 20px;
+	padding: 15px 0;
+	background-color: inherit;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	display: block;
+	float: left;
+	margin-left: 20%;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.review .review-btn-box .yes.on,
+.review .review-btn-box .no.on {
+	display: none;
+}
+.review .review-btn-box .end {
+	display: none;
+}
+.review .review-btn-box .end.on {
+	cursor: inherit;
+	display: block;
+}
+.review .review-btn-box .yes:hover,
+.review .review-btn-box .no:hover {
+	background-color: #ccc;
+	color: #fff;;
+}
+.rating-star-box button {
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	background-color: inherit;
+	cursor: pointer;
+}
+.rating-star-box i {
+	display: block;
+	float: left;
+	font-size: 30px;
+	color: #777;
+	padding: 0 2px
+}
+.user-review {
+	margin-top: 50px;
+	/* border-top: 1px solid #777; */
+}
+hr {
+	margin-left: 115px;
+	margin-top: 50px;
+}
+.user-review h3 {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+.user-review .user-text {
+	padding: 0 50px;
+	margin-top: 50px;
+}
+.user-review .id {
+	width: 50%;;
+	float: left;
+	line-height: 50px;
+	font-size: 20px;
+}
+.user-review .id img {
+	width: 50px;
+	height: 50px;
+	background-color: #eee;
+	margin-right: 10px;
+}
+.user-review .date {
+	width: 50%;;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	text-align: right;
+}
+.user-review .star {
+	margin-top: 10px;
+	width: 100%;
+	float: left;
+}
+.user-text p {
+	width: 100%;
+	margin-top: 20px;
+	float: left;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.user-review .user-img {
+	display: block;
+	float: left;
+	width: 100px;
+	height: 80px;
+	background-color: #eee;
+	border-radius: 0;
+}
+.user-img:not(:nth-of-type(1)) {
+	margin-left: 20px;
+}
+.user-review button {
+	display: block;
+	margin: auto;
+	margin-top: 40px;
+	cursor: pointer;
+	background-color: #fff;
+}
+
+
+
+
+
+
+
+.list-name {font-size: 36px; margin-bottom: 40px;}
+.list-place {font-size: 40px; margin-bottom: 10px; font-weight: bold;}
+.list-map {font-size: 18px; margin-bottom: 40px;}
+.list-price {font-size: 30px; margin-bottom: 10px;}
+.list-gram {font-size: 30px; margin-bottom: 30px;}
+.list-gp {font-size: 14px; color: #aaa; margin-bottom: 30px;}
+.list-tag {font-size: 20px;margin-bottom: 20px; color: #777; line-height: 1.6}
+
+/*footer*/
+#footer {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -70px;
+	height: 30px;
+	line-height: 30px;
+	color: #939393;
+	font-size: 14px;
+}
+#footer address {
+	text-align: center;
+}
+
+
+/* mdoal */
+[class $= modal-wrap] {
+	position: relative;
+	top: -886.5px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: none;
+}
+[class $= modal-wrap] .modal {
+	position: absolute;
+	width: 800px;
+	height: 500px;
+	left: 50%;
+	top: 50%;
+	margin-left: -400px;
+	margin-top: -250px;
+	background-color: #fff;
+	border-radius: 30px;
+}
+.modal img {
+	display: block;
+	margin: auto;
+	margin-top: 80px;
+	border-radius: 15px;
+}
+
+.modal .star-box {
+	margin-top: 20px;
+	text-align: center;
+}
+.modal form {
+	margin-top: 20px;
+	text-align: center;
+}
+.modal form input {
+	padding: 8px 20px;
+	border: solid 1px #ccc;
+	width: 400px;
+}
+.modal form button {
+	background-color: #ccc;
+	border: solid 1px #ccc;
+	color: #fff;
+	padding: 12px 20px;
+	cursor: pointer;
+	transition: all 0.3s;
+	font-size: 14px;
+}
+.modal form button:hover {
+	background-color: red;
+	border-color: red;
+}
+
+.choice-modal-wrap p {
+	margin-top: 20px;
+	font-size: 15px;
+}
+.choice-modal-wrap .check-text:first-child {
+	margin-top: 30px;
+}
+.choice-modal-wrap .check-text {
+	width: 50%;
+	padding-bottom: 20px;
+}
+.choice-modal-wrap .check-text a {
+	width: 43%;
+	font-size: 17px;
+}
+.choice-modal-wrap .check-text:not(:nth-last-of-type(1)) {
+	margin-bottom: 20px;
+}
+.choice-modal-wrap .choice-end {
+	display: block;
+	margin: auto;
+	background-color: #ccc;
+	color: #fff;;
+	padding: 8px 20px;
+	margin-top: 20px;
+	border-radius: 10px;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.choice-modal-wrap .choice-end:hover {
+	background-color: red;
+}
+.blind {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(0, 0, 0, 0);
+}
+
+.startRadio {
+    display: inline-block;
+    overflow: hidden;
+    height: 40px;
+}
+
+.startRadio:after {
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 10;
+    height: 40px;
+    background: url("../img/star.png") repeat-x 0 0;
+    background-size: contain;
+    pointer-events: none;
+}
+
+.startRadio__box {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.startRadio__box input {
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+}
+
+.startRadio__box input:checked + .startRadio__img {
+    background-color: yellow;
+	border-color: yellow;
+}
+
+.startRadio__img {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 500px;
+    height: 40px;
+    pointer-events: none;
+}
+
+
+
+@media screen and (max-width: 800px) {
+/*	FULL  */
+	body {
+			margin: 0;
+		margin-top: -5px;
+		width: 100%;
+		height: 100vh;
+	}
+	[class $=inner] {
+		width: 100%;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+/*	HEADER  */
+	#header {
+		height: 90px;
+		z-index: 2;
+	}
+	.header-inner {
+		height: 90px;
+	}
+	#header .logo {
+		margin-top: 0px;
+		position: inherit;
+		text-align: center;
+		margin-top: -30px;
+		z-index: 3;
+		cursor: pointer;
+	}
+	#header .gnb {
+		position: inherit;
+		width: 100%;
+		height: 50px;
+		margin-right: 0;
+		margin-top: 0px;
+		margin-left: 0px;
+		left: 0%;
+		top: 30%;
+		margin-top: 50px;
+		padding: 0 30px;
+		box-sizing: border-box;
+		z-index: 2;
+	}
+	#header .gnb a {
+		padding: 0;
+	}
+	#header .gnb a:nth-child(2) {
+		float: right;
+	}
+	#header .sns-box {
+		display: none;
+	}
+/*	MAIN  */
+	#main .main-inner {
+	position: relative;
+	height: 100vh;
+	margin-top: -114px;
+}
+	#main .main-inner .come {
+	top: 60%;
+	font-size: 2em;
+	margin-top: 0;
+	left: 50%;
+	margin-left: -130px;
+  }
+	#main .main-inner .img-box {
+		display: none;
+	}
+	#main .main-inner [class $= main-box] {
+    position: absolute;
+    width: 90%;
+		box-sizing: border-box;
+    top: 60%;
+		margin-top: -200px;
+    display: none;
+}
+	#main .check-box {
+	width: 100%;
+	height: 400px;
+	float: none;
+		box-sizing: border-box;
+		padding: 0 20px;
+}
+	.check-text {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0;
+		padding-bottom: 40px;
+	}
+	.check-text a {
+		text-align: center;
+	}
+	.check-text a i {
+				margin-left: 20px;
+	}
+	.check-text:first-child {
+		padding-top: 50px;
+     margin-top: 0px; 
+}
+	[class $=go-btn] {
+		margin-top: 0;
+	}
+
+	[class $=cake-box] {
+		width: 90%;
+		height: 60%;
+		top: 17%;
+	}
+
+	.cake-info {
+		height: 100%
+	}
+
+	.cake {
+		width: 100%;
+	}
+
+	.cake img {
+		width: 48%;
+		height: 150px;
+	}
+
+	.cake-text {
+		width: 48%;
+		float: left;
+		padding: 15px;
+		padding-left: 4%;
+		margin-left: 0px;
+		box-sizing: border-box;
+		transition: all 0.3s;
+	}
+
+	.flavor {
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	
+	
+	
+	.cake h3 {
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+
+	.map {
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+
+	.name {
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+
+	.price {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	
+	.tag {
+		font-size: 12px;
+	}
+	
+	
+	/*케이크 상세 설명*/
+	[class $=list] {
+		height: 100%;
+		position: relative;
+		display: none;
+	}
+	
+	.info-text {
+		margin-top: -230px;
+		top: 55%;
+		width: 100%;
+		height: auto;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	.info-text.on {
+		display: block;
+	}
+
+	.info-text > [class $=list-back-btn] {
+		display: block;
+		margin-top: 200px;
+	}
+
+	.info-text img {
+		width: 100%;
+		height: 100%;
+		float: none;
+		margin: auto;
+	}
+
+	.info-text .list-text {
+		float: left;
+		width: 100%;
+		height: 100%;
+		padding: 0px;
+		padding-left: 0px;
+		padding-top: 25px;
+		box-sizing: border-box;
+	}
+
+
+	.list-name {
+		font-size: 25px;
+		margin-bottom: 10px;
+	}
+
+	.list-place {
+		font-size: 25px;
+		margin-bottom: 5px;
+	}
+
+	.list-map {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+
+	.list-price {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+
+	.list-gram {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+
+	.list-gp {
+		font-size: 12px;
+		color: #aaa;
+		margin-bottom: 10px;
+	}
+	.list-tag {
+		font-size: 16px;
+	}
+	#footer {
+		margin-left: -50px;
+		
+	}
+	#footer address {
+		font-size: 12px;
+	}
+	.flavor {line-height: 1.5;}
+	.flavor i:last-child {margin-left: 0px;}
+	.list-tag {
+		font-size: 14px;
+		line-height: 1.3;
+	}
+	}
+	/*스크롤바*/
+
+	.cake-info::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	.cake-info::-webkit-scrollbar-thumb {
+		background-color: #2f3542;
+		border-radius: 30px;
+	}
+
+	.cake-info::-webkit-scrollbar-track {
+		background-color: grey;
+	}
