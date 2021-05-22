@@ -903,7 +903,7 @@
 						<p class="list-map">서울 송파구 송파대로48길 19 1층</p>
 						<h3 class="list-name">Strawberry rare cheese cake</h3>
 						<p class="list-price">7,000원 / 235g</p>
-						<p class="list-gp">1g당 약 30원 <br>(상기 내용은 오차가 있을수 있습니다)</p>
+						<p class="list-gp">1g당 약 31원 <br>(상기 내용은 오차가 있을수 있습니다)</p>
 						<p class="list-tag">#달콤생크림 #타르트지느낌시트 <br>#산미강한레어치즈</p>
 					</div>
 					<a href="javascript:;" class="cs-list-back-btn"><i class="fas fa-arrow-left"></i> Back</a>

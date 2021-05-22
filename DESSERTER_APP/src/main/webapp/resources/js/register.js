@@ -21,6 +21,7 @@ var mobile = document.querySelector('#mobile');
 var error = document.querySelectorAll('.error_next_box');
 
 id.addEventListener("change", checkId);
+idChk.addEventListener("change", checkId2);
 pw1.addEventListener("change", checkPw);
 pw2.addEventListener("change", comparePw);
 userName.addEventListener("change", checkName);
@@ -52,6 +53,8 @@ function checkId() {
 		error[0].style.display = "block";
 	}
 }
+
+
 
 function checkPw() {
 	var pwPattern = /[a-zA-Z0-9~!@#$%^&*()_+|<>?:{}]{8,16}/;
